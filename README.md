@@ -27,7 +27,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: Client side routing allows us to set up multiple pages within one single page or app. This allows us to navigate a site without having to refresh the browser on every link that is clicked. This makes for cleaner and smoother user interaction 
 
 ## Project Set Up
 
