@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const StyHeader = styled.header`
   background: #008000;
-  color: #00e6e6;
+  color: #99ffff;
   text-shadow: 1px 2px 3px black;
   height: 130px;
   padding 10px;

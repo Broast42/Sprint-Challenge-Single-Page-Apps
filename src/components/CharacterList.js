@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import styled from "styled-components";
+
+const FlexDiv = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`;
 
 export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
@@ -22,13 +28,15 @@ export default function CharacterList(props) {
 
   return (
     <section className="character-list">
-
-      {apiData.map((x,i)=>(
-        <div key={i}>
-          <CharacterCard data= {x}/>
-        </div>
+      <FlexDiv>
+        {apiData.map((x,i)=>(
+          <div key={i}>
+            <CharacterCard data= {x}/>
+          </div>
         
-      ))}
+        ))}
+      </FlexDiv>
+      
        
     </section>
   );
