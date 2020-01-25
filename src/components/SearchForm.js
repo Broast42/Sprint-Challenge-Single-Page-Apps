@@ -11,7 +11,7 @@ export default function SearchForm(props) {
   const submitHandle = e => {
     e.preventDefault();
     let arr = props.api.filter(x => x.name.includes(search));
-    props.setResult(arr);
+    props.result(arr);
     console.log("arr", arr);
   };
  

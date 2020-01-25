@@ -29,6 +29,10 @@ export default function WelcomePage() {
 
   console.log(searchResult);
 
+  const results = x => {
+    setSearchResult(x);
+  }
+
   return (
     <section className="welcome-page">
       <header>
@@ -40,7 +44,7 @@ export default function WelcomePage() {
             alt="rick"
           />
         
-          <SearchForm api={searchApi} result={searchResult}/>
+          <SearchForm api={searchApi} result={results}/>
         
         </FlexDiv1>
         
