@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header.js";
+
 import { Route } from "react-router-dom";
 import WelcomePage from "./components/WelcomePage.js";
 import CharacterList from "./components/CharacterList";
@@ -12,6 +13,7 @@ export default function App() {
   return (
     <main>
       <Header />
+
       <div className="content">
         <Route exact path="/" component={WelcomePage} />
         <Route exact path="/characters/" component={CharacterList} />
@@ -19,6 +21,7 @@ export default function App() {
         <Route exact path="/locations/" component={LocationsList} />
         <Route path="/location/:id" component={Location} />
       </div>
+
     </main>
   );
 }

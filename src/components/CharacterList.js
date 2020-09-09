@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import CharacterCard from "./CharacterCard";
 import PageChanger from "./PageChanger";
 import SearchForm from "./SearchForm";
@@ -21,6 +22,7 @@ const SearchBar = styled.div`
 `;
 
 
+
 export default function CharacterList() {
   
   const [ listData, setListData ] = useState([]);
@@ -40,6 +42,7 @@ export default function CharacterList() {
         setListData(res.data.results);
         setPageCount(res.data.info.pages);
         
+
       })
       .catch(error =>{
         console.log(error);
@@ -100,6 +103,7 @@ export default function CharacterList() {
 
       <PageChanger arr={arr} current={current} fn={pageChangeHandel} pageCount={pageCount}/>
     
+
     </section>
     
   );

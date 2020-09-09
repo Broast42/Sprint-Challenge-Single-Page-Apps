@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+
 const Sbutton= styled.button`
   background: rgb(153, 230, 255, 1);
   width 90px;
   margin 0px 5px;
   border-radius: 5px; 
 `;
+
 
 export default function SearchForm(props) {
 
@@ -20,6 +22,7 @@ export default function SearchForm(props) {
     e.preventDefault();
     let arr = props.api.filter(x => x.name.includes(search));
     props.result(arr);
+
     setSearch("");
   };
  
@@ -34,5 +37,6 @@ export default function SearchForm(props) {
 
      </form>
     </div>
+
   );
 }

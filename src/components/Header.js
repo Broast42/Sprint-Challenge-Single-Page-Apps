@@ -1,9 +1,10 @@
 import React from "react";
-import morty from "../img/rick-morty-header.jpg";
+
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const StyHeader = styled.header`
+
   background: black;
   color: #99e6ff;
   padding-top: 5px;
@@ -56,6 +57,7 @@ export default function Header() {
         <StyLink><Link to="/">Home</Link></StyLink>
         <StyLink><Link to="/characters/">Characters</Link></StyLink>
         <StyLink><Link to="/locations/">Locations</Link></StyLink>
+
       </StyNav>
     </StyHeader>
   );

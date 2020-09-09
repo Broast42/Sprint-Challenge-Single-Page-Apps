@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+
 const ListCard = styled.div`
   width: 400px;
   height: 150px;
@@ -47,3 +48,4 @@ export default function CharacterCard(props) {
     </ListCard>
   );
 }
+
