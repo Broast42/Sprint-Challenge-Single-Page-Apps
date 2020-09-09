@@ -1,4 +1,14 @@
 import React, { useState } from "react";
+import styled from "styled-components";
+
+
+const Sbutton= styled.button`
+  background: rgb(153, 230, 255, 1);
+  width 90px;
+  margin 0px 5px;
+  border-radius: 5px; 
+`;
+
 
 export default function SearchForm(props) {
 
@@ -12,18 +22,21 @@ export default function SearchForm(props) {
     e.preventDefault();
     let arr = props.api.filter(x => x.name.includes(search));
     props.result(arr);
-    console.log("arr", arr);
+
+    setSearch("");
   };
  
   return (
-    <section className="search-form">
+    <div>
      <form onSubmit={submitHandle}>
-       <div>
-         <label htmlFor="search">Search a Character</label> 
-       </div>
-       <input onChange={changeHandle} id="name" type="text" name="search" value={search} />
-       <button type="submit">Search</button>
+       
+      <label htmlFor="search">Search this page </label> 
+       
+      <input onChange={changeHandle} id="search" type="text" name="search" value={search} />
+      <Sbutton type="submit">Search</Sbutton>
+
      </form>
-    </section>
+    </div>
+
   );
 }
